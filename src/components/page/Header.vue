@@ -2,7 +2,7 @@
   <div id="header" class="blog">
     <header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
       <div class="am-u-sm-8 am-u-sm-centered">
-        <img width="250" src="/static/images/feng1.png" alt="Logo"/>
+        <img width="250" src="static/images/feng1.png" alt="Logo"/>
         <h2 class="am-hide-sm-only">放弃治疗的开源日记本</h2>
       </div>
     </header>
@@ -22,7 +22,7 @@
         </ul>
         <form class="am-topbar-form am-topbar-left am-form-inline" role="search">
           <div class="am-form-group">
-            <input type="text" class="am-form-field am-input-sm" placeholder="搜索">
+            <input type="text" v-model="input" class="am-form-field am-input-sm" placeholder="搜索" @keyup.enter="seachFun">
           </div>
 
         </form>
@@ -57,12 +57,25 @@
               {url:'/tool',title:"工具库"},
               {url:'/timeline',title:"归档"}
             ],
+            input:'',
             currentIndex:0,
           }
       },
       methods:{
         activeHander(index){
           this.currentIndex =index
+
+        },
+        seachFun(e){
+          var keyCode =window.event?e.keyCode:e.which;
+          // console.log('回车搜索',keyCode,e);
+          // console.log('输入框',this.input);
+          if(keyCode == 13 && this.input){
+            this.$router.push({path:'/search/'+this.input});
+          // <router-link :to="{name:'Filter',params:{type:'tag',name:items.name}}" class="blog-tag">{{items.name}}</router-link>
+            //this.$router.push({name:'Filter',params:{type:'search',name:this.input}});
+            this.input=""
+          }
 
         }
       },

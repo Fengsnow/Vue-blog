@@ -6,22 +6,22 @@
       <div class="am-g am-g-fixed blog-fixed blog-content">
         <figure data-am-widget="figure" class="am am-figure am-figure-default "   data-am-figure="{  pureview: 'true' }">
           <div id="container">
-            <div><img src="/static/images/01.jpg"><h3>Agfa</h3></div>
-            <div><img src="/static/images/02.jpg"><h3>Auto</h3></div>
-            <div><img src="/static/images/03.jpg"><h3>Bald eagle</h3></div>
-            <div><img src="/static/images/04.jpg"><h3>Black swan</h3></div>
-            <div><img src="/static/images/05.jpg"><h3>Book shelf</h3></div>
-            <div><img src="/static/images/06.jpg"><h3>Camera</h3></div>
-            <div><img src="/static/images/07.jpg"><h3>Camera</h3></div>
-            <div><img src="/static/images/25.jpg"><h3>Vintage camera</h3></div>
-            <div><img src="/static/images/09.jpg"><h3>Coffee</h3></div>
-            <div><img src="/static/images/10.jpg"><h3>Cookies</h3></div>
-            <div><img src="/static/images/11.jpg"><h3>Cubes</h3></div>
-            <div><img src="/static/images/12.jpg"><h3>DJ</h3></div>
-            <div><img src="/static/images/13.jpg"><h3>Doors</h3></div>
-            <div><img src="/static/images/14.jpg"><h3>Matchbox</h3></div>
-            <div><img src="/static/images/15.jpg"><h3>Freiburg</h3></div>
-            <div><img src="/static/images/16.jpg"><h3>Henna</h3></div>
+            <div><img src="static/images/01.jpg"><h3>Agfa</h3></div>
+            <div><img src="static/images/02.jpg"><h3>Auto</h3></div>
+            <div><img src="static/images/03.jpg"><h3>Bald eagle</h3></div>
+            <div><img src="static/images/04.jpg"><h3>Black swan</h3></div>
+            <div><img src="static/images/05.jpg"><h3>Book shelf</h3></div>
+            <div><img src="static/images/06.jpg"><h3>Camera</h3></div>
+            <div><img src="static/images/07.jpg"><h3>Camera</h3></div>
+            <div><img src="static/images/25.jpg"><h3>Vintage camera</h3></div>
+            <div><img src="static/images/09.jpg"><h3>Coffee</h3></div>
+            <div><img src="static/images/10.jpg"><h3>Cookies</h3></div>
+            <div><img src="static/images/11.jpg"><h3>Cubes</h3></div>
+            <div><img src="static/images/12.jpg"><h3>DJ</h3></div>
+            <div><img src="static/images/13.jpg"><h3>Doors</h3></div>
+            <div><img src="static/images/14.jpg"><h3>Matchbox</h3></div>
+            <div><img src="static/images/15.jpg"><h3>Freiburg</h3></div>
+            <div><img src="static/images/16.jpg"><h3>Henna</h3></div>
 
           </div>
         </figure>

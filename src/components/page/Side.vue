@@ -5,7 +5,8 @@
       <h2 class="blog-title"><span>Article Category</span></h2>
       <div class="am-u-sm-12 blog-clear-padding" >
         <div class="series_list" v-for="items in categoryList">
-          <a href="" class="blog-tag">{{items.name}}</a>
+          <router-link :to="{name:'Category',params:{name:items.name},query:{id: items.id}}" class="blog-tag">{{items.name}}</router-link>
+          <!--<a href="" class="blog-tag">{{items.name}}</a>-->
         </div>
       </div>
     </div>
@@ -28,7 +29,8 @@
       <div id="tags" >
 
         <div class="series_list" v-for="items in tagList">
-          <a href="#">{{items.name}}</a>
+          <router-link :to="{name:'Tag',params:{name:items.name},query:{id: items.id}}" class="blog-tag">{{items.name}}</router-link>
+          <!--<a href="#">{{items.name}}</a>-->
         </div>
 
 
@@ -40,7 +42,7 @@
       <h2 class="blog-title"><span>文章推荐</span></h2>
       <ul class="am-list" v-for="items in hotList">
 
-        <li><a href="#">{{items.title}}</a></li>
+        <li><router-link :to="{name:'Article',params:{id:items.id,title:items.title}}">{{items.title}}</router-link></li>
       </ul>
     </div>
   </div>
@@ -48,6 +50,7 @@
 </template>
 
 <script>
+
   import {getCategory,getTag,getHotArticle } from '../../api/api';
     export default {
         name: "side",

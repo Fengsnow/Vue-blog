@@ -12,10 +12,13 @@
             <img :src="items.img" alt="" class="am-u-sm-12">
           </div>
           <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-            <span><a href="" class="blog-color">{{items.categoryName}} &nbsp;</a></span>
+            <span><router-link :to="{name:'Category',params:{name:items.categoryName},query:{id: items.category}}" class="blog-color">{{items.categoryName}} &nbsp;</router-link></span>
             <span> @{{items.name}} &nbsp;</span>
-            <span>{{items.time}}</span>
-            <h1><a href="">{{items.title}}</a></h1>
+            <span>{{items.time}} &nbsp;</span>
+            <!--<span class="am-icon-eye"> {{items.views}}&nbsp; &nbsp;</span>-->
+            <!--<span class="am-icon-comments"> {{items.comment_count}}</span>-->
+            <!--<li  class="list" @click="jump(1,'列表1详情')">{{items.title}}</li>-->
+            <h1><router-link :to="{name:'Article',params:{id:items.id,title:items.title}}" @click="jump(items.id,items.title)">{{items.title}}</router-link></h1>
             <p>{{items.desc}}
             </p>
             <p><a href="" class="blog-continue">continue reading</a></p>
@@ -47,10 +50,12 @@
       components: {Side},
       data(){
         return {
-          list:[]
+          list:[],
+          page:'',
         }
       },
       methods:{
+
         getList(){
           getArticles()
             .then((response)=> {
@@ -61,6 +66,9 @@
             .catch(function (error) {
               console.log(error);
             });
+        },
+        jump(id,title){
+          this.$router.push('/article/'+id+'/'+title);
         }
       },
       created(){

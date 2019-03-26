@@ -6,7 +6,7 @@
       <div data-am-widget="slider" class="am-slider am-slider-b1" data-am-slider='{&quot;controlNav&quot;:false}' >
         <ul class="am-slides">
           <li>
-            <img src="/static/i/b1.jpg">
+            <img src="static/i/b1.jpg">
             <div class="blog-slider-desc am-slider-desc ">
               <div class="blog-text-center blog-slider-con">
                 <span><a href="" class="blog-color">Article &nbsp;</a></span>
@@ -19,7 +19,7 @@
             </div>
           </li>
           <li>
-            <img src="/static/i/b3.jpg">
+            <img src="static/i/b3.jpg">
             <div class="blog-slider-desc am-slider-desc ">
               <div class="blog-text-center blog-slider-con">
                 <span><a href="" class="blog-color">Article &nbsp;</a></span>

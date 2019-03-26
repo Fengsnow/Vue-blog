@@ -14,6 +14,7 @@ import '../static/css/app.css';
 // import '../static/js/jquery.min.js';
 import '../static/js/amazeui.min.js';
 import '../static/js/app.js';
+import '../static/js/cookie.js';
 // import '../static/js/pinto.min.js';
 // import '../static/js/img.js';
 

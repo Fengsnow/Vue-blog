@@ -20,9 +20,12 @@ export const getTag = params => { return axios.get(`${host}/tag/`) }
 //获取热门文章
 export const getHotArticle = params => { return axios.get(`${host}/hotarticle/`) }
 
+//获取时间线
+export const getTimeLine = params => { return axios.get(`${host}/timeline/`) }
+
 //获取文章列表
 export const getArticles = params => { return axios.get(`${host}/article/`, { params: params }) }
 
 
 //文章详细
-export const getArticlesDetail = articleId => { return axios.get(`${host}/articles/${articleId}`+'/') }
+export const getArticlesDetail = articleId => { return axios.get(`${host}/article/${articleId}`+'/') }

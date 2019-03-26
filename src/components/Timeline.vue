@@ -3,155 +3,51 @@
       <!-- content srart -->
       <div class="am-g am-g-fixed blog-fixed blog-content">
         <div class="am-u-sm-12">
-          <h1 class="blog-text-center">-- 存档 --</h1>
+          <h1 class="blog-text-center">-- 归档 --</h1>
+          <div v-for="(item,year) in list">
           <div class="timeline-year">
-            <h1>2015</h1>
+            <h1>{{year}}</h1>
             <hr>
+            <div v-for="(day,month) in item">
             <ul>
-              <h3>10月</h3>
+
+              <h3>{{month}}</h3>
               <hr>
+              <div v-for="(content) in day">
               <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">2015/10/18</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">君埋泉下泥销骨，我寄人间雪满头</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">风又起</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">amazeui</span>
+                <span class="am-u-sm-4 am-u-md-2 timeline-span">{{content.time}}</span>
+                <span class="am-u-sm-8 am-u-md-6"><router-link :to="{name:'Article',params:{id:content.id,title:content.title}}">{{content.title}}</router-link></span>
+                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">{{content.categoryName}}</span>
+                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">{{content.name}}</span>
               </li>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">2015/10/10</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">不为无益之事，何以遣有涯之生。</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">灯火阑珊</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">LWXYFER</span>
-              </li>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">2015/10/5</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">一想到你，我这张丑脸上就泛起微笑</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">凌晨四点钟</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">二师兄</span>
-              </li>
+                <br>
+              </div>
             </ul>
             <br>
-            <ul>
-              <br>
-              <h3>9月</h3>
-              <hr>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>
-              </li>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>
-              </li>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>
-              </li>
-            </ul>
-            <br>
-            <ul>
-              <br>
-              <h3>8月</h3>
-              <hr>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>
-              </li>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>
-              </li>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>
-              </li>
-            </ul>
+
+            </div>
+            <!--<div v-for="(day,month) in item">-->
+              <!--<br>-->
+            <!--<ul >-->
+              <!--<h3>{{month}}</h3>-->
+              <!--<hr>-->
+              <!--<div v-for="(content) in day">-->
+              <!--<li>-->
+                <!--<span class="am-u-sm-4 am-u-md-2 timeline-span">{{content.time}}</span>-->
+                <!--<span class="am-u-sm-8 am-u-md-6"><a href="article">{{content.title}}</a></span>-->
+                <!--<span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">{{content.categoryName}}</span>-->
+                <!--<span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">{{content.name}}</span>-->
+              <!--</li>-->
+              <!--</div>-->
+            <!--</ul>-->
+              <!--<br>-->
+            <!--</div>-->
+
+
           </div>
-          <div class="timeline-year">
-            <h1>2014</h1>
-            <hr>
-            <ul>
-              <h3>9月</h3>
-              <hr>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">2015/10/18</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">君埋泉下泥销骨，我寄人间雪满头</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">风又起</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">amazeui</span>
-              </li>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">2015/10/10</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">不为无益之事，何以遣有涯之生。</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">灯火阑珊</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">LWXYFER</span>
-              </li>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">2015/10/5</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">一想到你，我这张丑脸上就泛起微笑</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">凌晨四点钟</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">二师兄</span>
-              </li>
-            </ul>
-            <br>
-            <ul>
-              <br>
-              <h3>8月</h3>
-              <hr>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>
-              </li>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>
-              </li>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>
-              </li>
-            </ul>
-            <br>
-            <ul>
-              <br>
-              <h3>7月</h3>
-              <hr>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>
-              </li>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>
-              </li>
-              <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>
-              </li>
-            </ul>
+
           </div>
+
 
 
           <hr>
@@ -164,9 +60,34 @@
 </template>
 
 <script>
-  // import '../../static/js/app.js';
+  import {getTimeLine } from '../api/api';
     export default {
-        name: "Timeline"
+        name: "Timeline",
+      data(){
+        return {
+          list:[],
+        }
+      },
+      methods:{
+        getList(){
+          getTimeLine()
+            .then((response)=> {
+                //跳转到首页页response.body面
+                console.log(response)
+                this.list=response.data
+              }
+            )
+            .catch(function (error) {
+              console.log(error);
+            });
+        }
+      },
+      created(){
+
+      },
+      mounted(){
+        this.getList();
+      }
     }
 </script>
 

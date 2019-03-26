@@ -4,13 +4,14 @@ import Home from '@/components/page/Home'
 import Login from '@/components/Login'
 import Tool from '@/components/Tool'
 import Index from '@/components/Index'
+import Filter from '@/components/Filter'
 import Timeline from '@/components/Timeline'
 import Article from '@/components/Article'
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  //mode: 'history',
   routes: [
     {
       path: '/',
@@ -37,16 +38,26 @@ export default new Router({
           component: Timeline
         },
         {
-          path: '/article',
+          path: '/article/:id/:title',
           name: 'Article',
           component: Article
         },
+        {
+          path: '/search/:name',
+          name: 'Search',
+          component: Filter
+        },
+        {
+          path: '/category/:name',
+          name: 'Category',
+          component: Filter
+        },
+        {
+          path: '/tag/:name',
+          name: 'Tag',
+          component: Filter
+        },
       ]
-    },
-    {
-      path: '/article',
-      name: 'Article',
-      component: Login
     },
 
     {
